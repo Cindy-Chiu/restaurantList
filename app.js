@@ -1,7 +1,6 @@
 // require packages used in the project
 const express = require('express')
 
-const bodyParser = require('body-parser')
 const port = 3000
 const exphbs = require('express-handlebars')
 const hbshelpers = require('handlebars-helpers');
@@ -20,7 +19,6 @@ app.set('view engine', 'handlebars')
 app.use(express.static('public'))
 
 app.use(routes)
-app.use(bodyParser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
 
